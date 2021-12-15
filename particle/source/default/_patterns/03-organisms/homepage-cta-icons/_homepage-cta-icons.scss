@@ -1,0 +1,30 @@
+////
+/// Custom styles for homepage-cta-icons
+////
+@use 'sass:map';
+@use '../../../tokens/sass/utils';
+
+.homepage-cta-icons {
+  background: rgba(utils.bs-theme-color('brand-blue'), .85);
+  min-height: 220px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  z-index: 2;
+  position: relative;
+  /* stylelint-disable */
+  .card {
+    margin-bottom: 1rem;
+    .card-title {
+      color: utils.$bs-white !important;
+    }
+  }
+  /* stylelint-enable */
+  @include utils.bs-media-breakpoint-up(lg){
+    margin-top: -220px;
+    padding-top: 43px;
+    padding-bottom: 0;
+    .card {
+      margin-bottom: 0;
+    }
+  }
+}

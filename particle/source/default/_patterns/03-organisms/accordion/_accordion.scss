@@ -1,0 +1,48 @@
+@use 'sass:map';
+@use '../../../tokens/sass/utils';
+@use '../../01-atoms/svg/scss/utils' as svg;
+
+.accordion {
+  border-bottom: 1px solid #cecece;
+  &--header {
+    display: block;
+    width: 100%;
+    color: utils.bs-theme-color('brand-blue');
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: .5px;
+    padding: 22px 50px 22px 0;
+    border-top: 1px solid #cecece;
+    position: relative;
+    &:after {
+      content: '';
+      @include svg.sprite('minus-solid', (color: utils.bs-theme-color('brand-green-1')));
+      display: inline-block;
+      height: 16px;
+      width: 24px;
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+    }
+    &.collapsed {
+      color: utils.bs-theme-color('brand-green-1');
+      border-top: 1px solid #cecece;
+      &:after {
+        content: '';
+        @include svg.sprite('plus-solid', (color: utils.bs-theme-color('brand-green-1')));
+        display: inline-block;
+        height: 16px;
+        width: 24px;
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &--body {
+    padding-bottom: 22px;
+  }
+}

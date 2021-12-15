@@ -1,0 +1,38 @@
+{% extends '@templates/site-container.twig' %}
+
+  {% block hero %}
+    <section class="hero mb-6">
+      {% include '@molecules/carousel/_carousel.twig' with carousel_1 %}
+      <section class="mb-4 mb-md-0">
+        {% include '@organisms/homepage-cta-icons/_homepage-cta-icons.twig' %}
+      </section>
+      <div class="vertical-offset-1 container">
+        {% include '@organisms/card-grid/_card-grid.twig' with {
+          card_grid_rows: product_grid.card_grid_rows,
+        } %}
+        <div class="text-center w-100">
+          <a href="#" class="btn btn-outline text-align-center">See All Products</a>
+        </div>
+      </div>
+    </section>
+  {% endblock hero %}
+  {% block content %}
+
+    <section>
+      {% include '@organisms/case-study/_case-study.twig' with homepage_case_study %}
+    </section>
+    <section class="mb-md-6">
+      {% include '@organisms/featured-product/_featured-product.twig' with homepage_featured_product %}
+    </section>
+    <section class="">
+      {% include '@organisms/grid-half/_grid-half.twig' with homepage_product_builder %}
+    </section>
+    <section class="my-6 py-6">
+      <h2 class="section-header h1 text-center mb-6">Product Video Series</h2>
+      {% include '@molecules/carousel/_grid-carousel.twig' with homepage_video_series %}
+    </section>
+    <section class="py-6 bg-brand-blue">
+      <h2 class="section-header h1 text-center mb-6 text-white">InFocus</h2>
+      {% include '@molecules/carousel/_grid-carousel.twig' with homepage_infocus %}
+    </section>
+  {% endblock %}

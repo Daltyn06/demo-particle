@@ -1,0 +1,39 @@
+////
+/// Custom styles for featured-product
+////
+
+@use 'sass:map';
+@use '../../../tokens/sass/utils';
+
+.featured-product {
+  &--image-grid {
+    img {
+      width: 90px;
+      height: 90px;
+      margin-right: 2rem;
+      border-radius: 99999px;
+      object-fit: cover;
+    }
+  }
+  &--title {
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  &--location {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+  &--body-text {
+    color: utils.bs-theme-color('grey-500');
+  }
+}
+
+.paragraph {
+  .featured-product {
+    .content-right {
+      min-height: 500px;
+    }
+  }
+}

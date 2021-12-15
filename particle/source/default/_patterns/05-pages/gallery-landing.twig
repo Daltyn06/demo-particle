@@ -1,0 +1,41 @@
+{% extends '@templates/site-container.twig' %}
+{% block hero %}
+{% endblock hero %}
+{% block main_content %}
+  {% include '@atoms/breadcrumb/_breadcrumb.twig' with breadcrumb_demo %}
+  {% include '@organisms/case-study/_case-study.twig' with gallerylanding_featured %}
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="my-5">Explore the Places Where We Connect Spaces</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4 col-lg-3">
+        <h2 class="text-brand-blue mb-4">Search & Refine</h2>
+        facets
+      </div>
+      <div class="col-12 col-md-8 col-lg-9">
+        <h2 class="text-brand-blue mb-4">Galleries</h2>
+        {% include '@organisms/card-grid/_card-grid.twig' with {
+          card_grid_rows: product_grid_landing.card_grid_rows,
+          row_classes: product_grid_landing.row_classes,
+        } %}
+        <div class="mt-5">
+          {% include '@organisms/card-grid/_card-grid.twig' with {
+            card_grid_rows: gallery_list_landing.card_grid_rows,
+            row_classes: gallery_list_landing.row_classes,
+          } %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="">
+    {% include '@organisms/grid-half/_grid-half.twig' with homepage_product_builder %}
+  </section>
+
+  <section>
+    {% include '@organisms/case-study/_case-study.twig' with homepage_case_study %}
+  </section>
+{% endblock main_content %}

@@ -1,0 +1,59 @@
+////
+/// Custom styles for case-study
+////
+@use 'sass:map';
+@use '../../../tokens/sass/utils';
+
+.case-study {
+  padding: 60px 0;
+  @include utils.bs-media-breakpoint-up(md){
+    padding: 120px 0;
+  }
+  .featured-image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &--image-grid {
+    @include utils.bs-media-breakpoint-up(md){
+      margin-left: -120px;
+    }
+    img {
+      margin-bottom: 1rem;
+      max-width: 149px;
+      max-height: 129px;
+      object-fit: cover;
+      @include utils.bs-media-breakpoint-up(md){
+        margin-bottom: 0;
+        margin-right: 31px;
+      }
+
+    }
+  }
+
+  &--title {
+    font-weight: 300;
+  }
+
+  &--location {
+    text-transform: uppercase;
+  }
+
+  .section-title {
+    background-color: rgba(utils.bs-theme-color('grey-800'), .50);
+    text-transform: uppercase;
+    @include utils.bs-media-breakpoint-up(md){
+      float: left;
+      padding: .5rem 1rem;
+    }
+  }
+  /* stylelint-disable */
+  &--link {
+    color: utils.$bs-gray-800 !important;
+    &:hover {
+      color: utils.$bs-white !important;
+    }
+  }
+  /* stylelint-enable */
+}

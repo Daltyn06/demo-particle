@@ -1,0 +1,172 @@
+{% extends '@templates/site-container.twig' %}
+{% block hero %}
+{% endblock hero %}
+{% block main_content %}
+  {% include '@atoms/breadcrumb/_breadcrumb.twig' with breadcrumb_demo %}
+  {% embed '@organisms/featured/_featured.twig' %}
+    {% block image %}
+      {% include '@organisms/slider-sync/_slider-sync.twig' with product_featured_slider %}
+
+    {% endblock image %}
+    {% block attributes %}
+      <h1 class="featured--title">LX2044 Series</h1>
+      <div class="field">
+        <div class="field__label">
+          Application
+        </div>
+        <div class="field__item">
+          The LumeLEX 2044 Series is lorem ipsum dolor sit amet, mitas consectetur adipiscing elit, sed do.
+        </div>
+      </div>
+      <div class="field">
+        <div class="field__label">
+          Beam Spread
+        </div>
+        <div class="field__item">
+          Choice of field changeable optics: 10°, 15°, 20°, 24°, 30°, 35° 40°, 50°, 55° and 60°
+        </div>
+      </div>
+      <div class="field">
+        <div class="field__label">
+          Size and Weight
+        </div>
+        <div class="field__item">
+          5.75 (146mm) x 12.38 (313mm), 8lb. (3.6 kg)
+        </div>
+      </div>
+      <div class="field">
+        <div class="field__label">
+          Available Color
+        </div>
+        <div class="field__item">
+          <span class="black circle"></span>
+          <span class="grey circle"></span>
+          <span class="white circle"></span>
+        </div>
+      </div>
+      <div class="field inline">
+        <div class="field__label">
+          Lifetime
+        </div>
+        <div class="field__item">
+          50,000 hours
+        </div>
+      </div>
+      <div class="field inline">
+        <div class="field__label">
+          Wattage
+        </div>
+        <div class="field__item">
+          17-67 Watts
+        </div>
+      </div>
+      <div class="field inline">
+        <div class="field__label">
+          Availability
+        </div>
+        <div class="field__item">
+          4-6 Weeks
+        </div>
+      </div>
+      {% include "@atoms/button/_button.twig" with icon_button_builder %}
+      {% include "@atoms/button/_button.twig" with icon_button_share %}
+    {% endblock attributes %}
+  {% endembed %}
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 col-md-8 col-lg-9">
+        <h2 class="h1">Summary</h2>
+        <h3 class="subheading text-brand-blue">Subheadline about the light goes right in this area here</h3>
+        <div class="body-trimmed mb-5">
+          <p class="trimmed-content">The LumeLEX 2044 Series is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a class="read-more text-brand-green-1">Read More +</a>
+        </div>
+        <h2 class="h1">Product Specifications</h2>
+        <div class="body-trimmed mb-5">
+          <p class="trimmed-content">The LumeLEX 2044 Series is Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a class="read-more text-brand-green-1">Read More +</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-3 dimming">
+        <h2 class="h1">Dimming</h2>
+        <div class="svg-text-wrapper d-flex">
+          {% include '@atoms/svg/_svg--icon.twig' with {
+            svgicon: {
+              svgname: 'elv-reverse-phase',
+            },
+            view_box: '0 0 65 64',
+            paths: {
+              images: asset_path|default('../../../assets/images'),
+            },
+          } %}
+          <span class="text-brand-blue">EVL (Reverse Phase)</span>
+        </div>
+        <div class="svg-text-wrapper d-flex">
+          {% include '@atoms/svg/_svg--icon.twig' with {
+            svgicon: {
+              svgname: '_-10v',
+            },
+            view_box: '0 0 65 64',
+            paths: {
+              images: asset_path|default('../../../assets/images'),
+            },
+          } %}
+          <span class="text-brand-blue">0-10V</span>
+        </div>
+        <div class="svg-text-wrapper d-flex">
+          {% include '@atoms/svg/_svg--icon.twig' with {
+            svgicon: {
+              svgname: 'lutron',
+            },
+            view_box: '0 0 65 64',
+            paths: {
+              images: asset_path|default('../../../assets/images'),
+            },
+          } %}
+          <span class="text-brand-blue">Lutron Hi-Lume</span>
+        </div>
+        <div class="svg-text-wrapper d-flex">
+          {% include '@atoms/svg/_svg--icon.twig' with {
+            svgicon: {
+              svgname: 'dmx',
+            },
+            view_box: '0 0 65 64',
+            paths: {
+              images: asset_path|default('../../../assets/images'),
+            },
+          } %}
+          <span class="text-brand-blue">DMX</span>
+        </div>
+        <div class="svg-text-wrapper d-flex">
+          {% include '@atoms/svg/_svg--icon.twig' with {
+            svgicon: {
+              svgname: 'integral-dimmer',
+            },
+            view_box: '0 0 65 64',
+            paths: {
+              images: asset_path|default('../../../assets/images'),
+            },
+          } %}
+          <span class="text-brand-blue">Integral Dimmer</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="h1">Downloads</h2>
+        {% include '@organisms/accordion/_accordion.twig' with accordion_1 %}
+      </div>
+    </div>
+  </div>
+
+  <section class="">
+    {% include '@organisms/grid-half/_grid-half.twig' with homepage_product_builder %}
+  </section>
+
+  <section>
+    {% include '@organisms/awards/_awards.twig' with {
+      awards: awards,
+    } %}
+  </section>
+{% endblock main_content %}

@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * grid-half
+ *
+ * Available variables for grid-half:
+ *  - grid_half.variable_name [variable_type]: Description of the variable. Example below.
+ *  - grid_half.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+
+<div class="grid-half bg-brand-blue-lt position-relative">
+  {% if background_image %}
+    {% include '@atoms/image/_image.twig' with {
+      image: background_image,
+    } %}
+  {% endif %}
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6 left-column">
+        {% block left %}
+          {% if sub_title %}
+            <p class="grid-half--sub-title text-uppercase text-brand-blue">{{ sub_title }}</p>
+          {% endif %}
+          {% if title %}
+            <h2 class="h1 grid-half--title">{{ title }}</h2>
+          {% endif %}
+          {% if body %}
+            <p class="grid-half--body">{{ body }}</p>
+          {% endif %}
+        {% endblock left %}
+      </div>
+      <div class="col-12 col-lg-6">
+        {% block right %}
+          <div class="cta-form-block">
+            <h3 class="cta-form-block--title text-brand-blue">{{ cta_title }}</h3>
+            <p class="cta-form-block--body">{{ cta_body }}</p>
+            {% block form %}
+            <form class="d-block d-md-flex justify-content-between">
+              <select>
+                <option>Select a Led Specification</option>
+              </select>
+              <input class="submit btn" value="Continue >">
+            </form>
+            {% endblock form %}
+          </div>
+        {% endblock right %}
+      </div>
+    </div>
+  </div>
+</div>

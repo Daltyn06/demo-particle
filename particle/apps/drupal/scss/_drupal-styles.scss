@@ -1,0 +1,20 @@
+/* stylelint-disable */
+.thumbnails .slick-slide {
+  cursor: pointer;
+}
+
+.align-center img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+}
+
+.align-left img {
+  padding: 10px 10px 10px 0;
+}
+
+.align-right img {
+  padding: 10px 0 10px 10px;
+}
+/* stylelint-enable */

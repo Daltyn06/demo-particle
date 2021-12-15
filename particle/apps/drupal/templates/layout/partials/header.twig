@@ -1,0 +1,28 @@
+{% extends '@organisms/header/_header.twig' %}
+{% set asset_path = paths.assets ~ '/images' %}
+
+{% block utilityNav %}
+  {{ page.utility_nav }}
+{% endblock utilityNav %}
+{% block navbarMobile %}
+  {{ page.mobile_nav }}
+{% endblock navbarMobile %}
+{% block navbarSearch %}
+  {{ page.mobile_search }}
+{% endblock navbarSearch %}
+{% block ProductMegaNav %}
+  {{ page.product_meganav }}
+{% endblock ProductMegaNav %}
+{% block branding %}
+  {{ page.header_branding }}
+{% endblock branding %}
+{% block ResourcesMegaNav %}
+  {{ page.resources_meganav }}
+{% endblock ResourcesMegaNav %}
+{% block AboutMegaNav %}
+  {{ page.about_meganav }}
+{% endblock AboutMegaNav %}
+{% block primaryMenu %}
+  {{ page.main_menu }}
+{% endblock primaryMenu %}
+

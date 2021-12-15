@@ -1,0 +1,32 @@
+{#
+/**
+ * @file Branding!
+ * Designed to be added inside a Jumbotron.
+ *
+ * Available variables:
+ * - url: [string] the url the block directs to.
+ * - logo_svg_inline: [string] The SVG path.
+ * - logo_img_src: [string] The IMG path.
+ * - site_name: [string] the site name provided by the app.
+ * - site_slogan: [string] the site slogan provided by the app.
+ */
+#}
+
+<a class="navbar-brand text-center" href="{{ url }}" title="{{ site_name }}" rel="home">
+  {% if logo_svg_inline %}
+    {% include '@atoms/svg/_svg.twig' with {
+      svg: {
+        svgpath: logo_svg_inline,
+        colorOriginal: true,
+      }
+    } %}
+  {% elseif logo_img_src %}
+    {% include "@atoms/image/_image.twig" with {
+      image: {
+        variant: 'primary',
+        src: logo_img_src,
+        alt: site_name ~ ' site logo',
+      }
+    } %}
+  {% endif %}
+</a>

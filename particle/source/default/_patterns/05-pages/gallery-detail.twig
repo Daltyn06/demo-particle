@@ -1,0 +1,96 @@
+{% extends '@templates/site-container.twig' %}
+{% block hero %}
+{% endblock hero %}
+{% block main_content %}
+  {% include '@atoms/breadcrumb/_breadcrumb.twig' with breadcrumb_demo %}
+  <div class="bg-grey-800 py-4">
+    {% embed '@organisms/featured/_featured.twig' %}
+      {% block image %}
+        {% include '@organisms/slider-sync/_slider-sync.twig' with product_featured_slider %}
+
+      {% endblock image %}
+      {% block attributes %}
+        <h1 class="featured--title text-white">Whitney Museum of American Art</h1>
+        <div class="field">
+          <div class="field__label">
+            Project
+          </div>
+          <div class="field__item">
+            <a href="#projects">Whitney Museum of American Art</a>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field__label">
+            Location
+          </div>
+          <div class="field__item text-white">
+            New York, NY| United States
+          </div>
+        </div>
+        <div class="field">
+          <div class="field__label">
+            Awards
+          </div>
+          <div class="field__item">
+            <a href="#awards">IIDA Award of Merit - National Portrait Gallery</a>
+            <a href="#awards">IIDA Award of Merit - National Portrait Gallery</a>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field__label">
+            Lighting Designers
+          </div>
+          <div class="field__item">
+            <a href="/">Circle Design Group</a>
+            <a href="/">Collaborative Lighting LLC</a>
+          </div>
+        </div>
+        {% include "@atoms/button/_button.twig" with icon_button_share_gallery %}
+        {% include "@atoms/button/_button.twig" with icon_button_case_study %}
+
+      {% endblock attributes %}
+    {% endembed %}
+  </div>
+  <div class="container py-6">
+    <div class="row mb-5">
+      <div class="col-12">
+        <h4 class="text-brand-blue">Whitney Museum of American Art</h4>
+        <div class="mb-5">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-6 bg-off-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="section-header h1 mb-6">Products in this Gallery</h2>
+        </div>
+      </div>
+    </div>
+    {% include '@organisms/card-grid/_card-grid.twig' with {
+      card_grid_rows: gallery-detail.card_grid_rows,
+      row_classes: 'col-md-3',
+    } %}
+  </section>
+
+
+  <section>
+    {% include '@organisms/awards/_awards.twig' with {
+      awards: awards,
+    } %}
+  </section>
+
+  <section class="py-6 bg-off-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="section-header h1 text-center mb-6">Related Products</h2>
+        </div>
+      </div>
+    </div>
+    {% include '@molecules/carousel/_grid-carousel.twig' with homepage_video_series %}
+  </section>
+{% endblock main_content %}

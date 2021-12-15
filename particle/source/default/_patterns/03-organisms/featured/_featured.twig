@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * featured
+ *
+ * Available variables for featured:
+ *  - featured.variable_name [variable_type]: Description of the variable. Example below.
+ *  - featured.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+{% if container %}
+  {% set container_class = 'container' %}
+{% endif %}
+<div class="featured my-5 {{ container_class }}">
+  <div class="row">
+    <div class="col-12 col-lg-7 col-xl-8">
+      <div class="image-wrapper">
+        {% block image %}
+          {% set image = {
+            variant: 'primary',
+            style: 'featured_large',
+            placeholder: true,
+          } %}
+
+          {% include "@atoms/image/_image.twig" with {
+            image: image,
+          } %}
+        {% endblock image %}
+      </div>
+    </div>
+    <div class="col-12 col-lg-5 col-xl-4 position-relative pr-0">
+      <div class="attributes">
+        {% block attributes %}
+          <p class="featured--sub-title text-uppercase text-brand-blue">{{ subtitle }}</p>
+          <h2 class="h1 featured--title">{{ title }}</h2>
+          <h3 class="featured--subheading">{{ subheading }}</h3>
+          <p class="featured--body">{{ body }}</p>
+          {% if cta_button %}
+            {% include "@atoms/button/_button.twig" with cta_button %}
+          {% endif %}
+          {% if icon_button %}
+            {% include "@atoms/button/_button.twig" with icon_button %}
+          {% endif %}
+        {% endblock attributes %}
+      </div>
+    </div>
+  </div>
+</div>

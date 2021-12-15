@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if rows is not empty %}
+  {% set asset_path = paths.assets ~ '/images' %}
+  {% embed '@organisms/awards/_awards.twig' %}
+    {% block awards_list %}
+      {% for row in rows %}
+        {{- row.content -}}
+      {% endfor %}
+    {% endblock awards_list %}
+    {% block award_image %}
+      {% include '@atoms/image/_image.twig' with {
+        image: {
+          variant: 'primary',
+          src: asset_path ~ '/awards.png'
+        },
+      } %}
+    {% endblock award_image %}
+  {% endembed %}
+{% endif %}

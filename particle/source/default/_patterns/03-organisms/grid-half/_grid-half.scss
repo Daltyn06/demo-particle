@@ -1,0 +1,65 @@
+////
+/// Custom styles for grid-half
+////
+@use 'sass:map';
+@use '../../../tokens/sass/utils';
+
+.grid-half {
+  overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  .image--bg {
+    position: absolute;
+    background-position: right;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+  &--sub-title {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+  }
+
+  &--title {
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  &--body {
+    color: utils.bs-theme-color('grey-500');
+    max-width: 75%;
+  }
+
+  .cta-form-block {
+    background: rgba(#ffffff, .8);
+    padding: 20px;
+    @include utils.bs-media-breakpoint-up(md) {
+      padding: 60px;
+    }
+
+    &--title {
+      font-weight: 400;
+      letter-spacing: .5px;
+      font-size: 22px;
+      line-height: 28px;
+      text-transform: capitalize;
+    }
+    &--body {
+      color: utils.bs-theme-color('grey-500');
+      margin-bottom: 2rem;
+    }
+
+    .pblist-submit {
+      @include utils.bs-media-breakpoint-down(md) {
+        margin-top: 1rem;
+      }
+    }
+  }
+  .left-column {
+    @include utils.bs-media-breakpoint-up(lg) {
+      padding: 60px 60px 60px 0;
+    }
+  }
+}

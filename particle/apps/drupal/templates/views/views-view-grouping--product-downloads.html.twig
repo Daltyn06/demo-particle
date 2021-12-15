@@ -1,0 +1,230 @@
+{#
+/**
+ * @file
+ * Theme override to display a single views grouping.
+ *
+ * Available variables:
+ * - view: The view object.
+ * - grouping: The grouping instruction.
+ * - grouping_level: A number indicating the hierarchical level of the grouping.
+ * - title: The group heading.
+ * - content: The content to be grouped.
+ * - rows: The rows returned from the view.
+ *
+ * @see template_preprocess_views_view_grouping()
+ */
+#}
+{% set asset_path = paths.assets ~ '/images' %}
+{% set clean_title = title|clean_class %}
+{% if title %}
+  <a href="" class="accordion--header collapsed" data-toggle="collapse" data-target="#{{ title|clean_class }}" aria-expanded="false" aria-controls="{{ title|clean_class }}">
+    {{ title }}
+  </a>
+{% endif %}
+
+<div id="{{ title|clean_class }}" class="collapse accordion--body" data-parent="#accordion-downloads">
+  {% if clean_title == 'spec-sheet' %}
+    <div class="key-wrapper">
+      <div class="source-key mb-3">
+        <ul class="d-flex nav">
+          <li><h4 class="text-brand-blue text-uppercase mb-0">Source:</h4></li>
+          <li>
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'xicato-t19-spot',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">Xicato T19 Spot</span>
+          </li>
+          <li>
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'xicato-ts9-tight-spot',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">Xicato TS9 Tight Spot</span>
+          </li>
+          <li class="dim-to-warm-icon">
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'dim-to-warm',
+                svgfill: 'dim-to-warm',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">Dim to Warm</span>
+          </li>
+          <li>
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'cob',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">COB</span>
+          </li>
+          <li>
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'color-changing-dynamic',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">Color Changing/Dynamic</span>
+          </li>
+          <li>
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'uv',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">UV</span>
+          </li>
+        </ul>
+      </div>
+      <div class="controls-key mb-6">
+        <ul class="d-flex nav">
+          <li><h4 class="text-brand-blue text-uppercase mb-0">Controls:</h4></li>
+          <li>
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'dmx',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">DMX</span>
+          </li>
+          <li>
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'elv-reverse-phase',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">ELV</span>
+          </li>
+          <li>
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'triac-forward-phase',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">TRIAC</span>
+          </li>
+          <li>
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: '_-10v',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">0-10V</span>
+          </li>
+          <li>
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'lutron-hi-lume',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">Lutron Hi-Lume</span>
+          </li>
+          <li>
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'lutron-ecosystem',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">Lutron EcoSystem</span>
+          </li>
+          <li>
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'integral-dimmer',
+              },
+              view_box: '0 0 65 64',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+            <span class="icon-label">Integral Dimmer</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {{ content }}
+
+  {% elseif clean_title == 'photometry' %}
+
+    <ul class="nav nav-pills mb-3" role="tablist">
+      {% for key, group in content %}
+        {% set active_class = '' %}
+        {% if loop.first %}
+          {% set active_class = 'active' %}
+        {% endif %}
+        <li class="nav-item">
+          <a class="nav-link {{ active_class }}" data-toggle="pill" role="tab" href="#subcategory-{{ group['#title']|striptags|trim|clean_class }}">
+            {{ group['#title'] }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <div class="tab-content" >
+      {% for group in content %}
+        {% set active_class = '' %}
+        {% if loop.first %}
+          {% set active_class = 'show active' %}
+        {% endif %}
+        <div class="tab-pane fade {{ active_class }}" role="tabpanel" id="subcategory-{{ group['#title']|striptags|trim|clean_class }}">
+          {{ group|render}}
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    {{ content }}
+  {% endif %}
+
+</div>

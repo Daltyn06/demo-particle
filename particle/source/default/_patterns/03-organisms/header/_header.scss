@@ -1,0 +1,106 @@
+////
+/// Custom styles for header
+////
+@use 'sass:map';
+@use '../../../tokens/sass/utils';
+
+.header {
+  @include utils.bs-media-breakpoint-up(lg){
+    z-index: 500;
+    position: relative;
+  }
+  @include utils.bs-media-breakpoint-down(lg) {
+    background: utils.bs-theme-color('brand-blue');
+  }
+
+  &--utility-bar {
+    height: 40px;
+    background: #f9f9f9;
+  }
+  &--utility-nav {
+    a {
+      line-height: 40px;
+      font-size: 14px;
+      color: utils.$bs-gray-800;
+      font-weight: 500;
+      margin-left: 1rem;
+      padding: 0 1rem;
+
+      &.btn {
+        border: 0;
+        background-color: utils.bs-theme-color('brand-green-3');
+        padding: 0 34px;
+        color: utils.bs-theme-color('brand-green-1');
+        height: 100%;
+      }
+    }
+  }
+
+  .utility-brand {
+    height: 15px;
+    svg {
+      height: 15px;
+      width: 173px;
+    }
+  }
+
+  .navbar-collapse {
+    background-color: rgba(utils.$bs-white, 1);
+    position: absolute;
+    z-index: 5000;
+    width: 100%;
+    nav.block-system-menu-blockmain {
+      padding: 21px 31px 0 31px;
+    }
+    #block-usermenu-2{
+      background: utils.bs-theme-color('brand-blue-tint-20');
+    }
+    nav.block-system.block-system-menu-blockaccount {
+      padding: 15px 31px 15px 31px;
+      a {
+        color: utils.$bs-black
+      }
+    }
+  }
+
+  .navbar-toggler-icon--bars, .navbar-toggler-icon--search {
+    svg {
+      width: 23px;
+      height: 26px;
+    }
+  }
+  #nav-home {
+    margin: 0;
+    /* stylelint-disable */
+    padding: 0!important;
+    /* stylelint-enable */
+    height: 33px;
+    width: 54px;
+    .link-text {
+      display: none;
+    }
+  }
+
+  .nav-tabs {
+    border: none;
+    .nav-link {
+      border: none;
+      &:active {
+        border: none;
+      }
+    }
+  }
+
+  @include utils.bs-media-breakpoint-down(lg) {
+    .brand {
+      align-items: center;
+      display: flex;
+    }
+    .navbar-brand {
+      svg {
+        width: 187px;
+        height: 25px;
+      }
+    }
+  }
+}

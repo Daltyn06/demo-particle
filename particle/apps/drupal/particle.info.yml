@@ -1,0 +1,44 @@
+name: Particle
+type: theme
+description: A Theme with Pattern Lab
+base theme: stable
+core_version_requirement: ^8.8 || ^9
+libraries:
+  - particle/core
+libraries-override:
+  core/jquery: particle/jquery
+entity_print:
+  node:
+    all: 'particle/print-styling'
+regions:
+  local_tasks: Local Tasks
+  utility_nav: Utility Navigation
+  main_menu: Menu
+  primary_menu: Primary menu
+  mobile_nav: Mobile Navigation
+  mobile_search: Mobile Search
+  product_meganav: Product MegaNav
+  resources_meganav: Resources MegaNav
+  about_meganav: About Us MegaNav
+  header_branding: Header branding
+  header_cta: Header CTA
+  secondary_menu: Secondary menu
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  content_top: Content top
+  content: Content
+  content_bottom: Content bottom
+  sidebar_first: Sidebar first
+  sidebar_second: Sidebar second
+  footer_top: Footer Top
+  footer_first: Footer First
+  footer_second: Footer Second
+  footer_third: Footer Third
+  footer_fourth: Footer Fourth
+  footer_bottom: Footer Bottom
+
+components:
+  namespaces:
+    atoms: ../../dist/app-drupal/assets/atomic/_patterns/01-atoms
+    molecules: ../../dist/app-drupal/assets/atomic/_patterns/02-molecules
+    organisms: ../../dist/app-drupal/assets/atomic/_patterns/03-organisms

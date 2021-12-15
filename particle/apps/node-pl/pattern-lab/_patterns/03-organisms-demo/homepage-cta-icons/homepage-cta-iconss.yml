@@ -1,0 +1,23 @@
+homepage_cta_icons:
+  example_var: This is an example var
+
+icon_card_1:
+  card_title: What's New
+  card_text: Lorem ipsum dolor sit amet, consectetur.
+  card_icon: 'tools-solid'
+  card_border: 'none'
+  text_color: 'white'
+
+icon_card_2:
+  card_title: Product Builder
+  card_text: Lorem ipsum dolor sit amet, consectetur.
+  card_icon: 'tools-solid'
+  card_border: 'none'
+  text_color: 'white'
+
+icon_card_3:
+  card_title: Galleries
+  card_text: Lorem ipsum dolor sit amet, consectetur.
+  card_icon: 'tools-solid'
+  card_border: 'none'
+  text_color: 'white'

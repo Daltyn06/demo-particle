@@ -1,0 +1,87 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - content.children: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - content: The field item content.
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ *
+ *
+ *
+ *  Customize our top level menu
+ *
+ *
+ */
+#}
+{% import _self as menu %}
+
+{{ menu.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+
+  {% for key, item in items if key|first != '#' %}
+
+    {#
+      We have to merge in the Menu Link Attributes manually
+      https://www.drupal.org/project/menu_item_extras/issues/3024578#comment-13375060
+    #}
+    {% if item.url.getOption('attributes') %}
+      {% set link_attr = create_attribute(item.url.getOption('attributes')) %}
+    {% else %}
+      {% set link_attr = create_attribute() %}
+    {% endif %}
+
+    {%
+      set link_attr = link_attr.addClass([
+        'nav-link',
+        item.is_expanded ? 'dropdown-toggle',
+      'nav-' ~ item.title|clean_class,
+      ]).setAttribute('data-toggle', item.is_expanded ? 'dropdown' : link_attr['data-toggle'])
+      .setAttribute('id', 'nav-' ~ item.title|clean_class)
+    %}
+    {# Item Attributes #}
+    {% if item.title == 'Home' %}
+      {%
+        set item_attr = item.attributes.addClass([
+        'nav-item',
+        item.is_expanded ? 'dropdown has-megamenu',
+        'ml-auto mr-auto',
+      ])
+      %}
+    {% else %}
+      {%
+        set item_attr = item.attributes.addClass([
+          'nav-item',
+          item.is_expanded ? 'dropdown has-megamenu'
+        ])
+      %}
+    {% endif %}
+
+    <div {{ item_attr }}>
+      <a href="{{ item.url }}" {{ link_attr }}>
+        <span class="link-text">{{ item.title }}</span>
+        {{ item.content.field_icon }}
+      </a>
+
+      {% set rendered_content = item.content|without('field_icon') %}
+      {% if rendered_content|render %}
+        {{ rendered_content }}
+      {% endif %}
+    </div>
+  {% endfor %}
+
+
+{% endmacro %}
+

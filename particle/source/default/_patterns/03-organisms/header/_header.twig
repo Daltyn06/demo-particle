@@ -1,0 +1,305 @@
+{#
+/**
+ * @file
+ * header
+ *
+ * Available variables for header:
+ *  - header.variable_name [variable_type]: Description of the variable. Example below.
+ *  - header.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+
+<header class="header" role="banner">
+  <div class="header--utility-bar d-none d-lg-block">
+    <div class="container-wide">
+      <div class="row">
+        <div class="header--text-brand col-12 col-md-4 d-flex align-items-center">
+          <a class="utility-brand" href="/">
+            {% include '@atoms/svg/_svg--icon.twig' with {
+              svgicon: {
+                svgname: 'logo-text',
+              },
+              view_box: '0 0 173 15',
+              paths: {
+                images: asset_path|default('../../../assets/images'),
+              },
+            } %}
+          </a>
+        </div>
+        <div class="header--utility-nav col-12 col-md-8">
+          {% block utilityNav %}
+            <nav>
+              <ul class="nav justify-content-end">
+                <li class="nav-item"><a href="#">Find a Represenative</a></li>
+                <li class="nav-item"><a href="#">Contact Us</a></li>
+                <li class="nav-item"><a class="btn btn-square" href="#">Login</a></li>
+              </ul>
+            </nav>
+          {% endblock utilityNav %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-lg-none d-flex">
+    <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#block-exposedformglobal-search-indexpage-1">
+      <span class="navbar-toggler-icon--search text-white">
+        {% include '@atoms/svg/_svg--icon.twig' with {
+          svgicon: {
+            svgname: 'search-solid',
+          },
+          view_box: '0 0 512 512',
+          paths: {
+            images: asset_path|default('../../../assets/images'),
+          },
+        } %}
+      </span>
+    </button>
+    <div class="brand mr-auto ml-auto">
+      <a class="navbar-brand text-center" href="/">
+        {% include '@atoms/svg/_svg--icon.twig' with {
+          svgicon: {
+            svgname: 'logo-mobile-white',
+          },
+          view_box: '0 0 187 25',
+          paths: {
+            images: asset_path|default('../../../assets/images'),
+          },
+        } %}
+      </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon--bars text-white">
+        {% include '@atoms/svg/_svg--icon.twig' with {
+          svgicon: {
+            svgname: 'bars-solid',
+          },
+          view_box: '0 0 448 512',
+          paths: {
+            images: asset_path|default('../../../assets/images'),
+          },
+        } %}
+      </span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse d-lg-none" id="mobileNav">
+    {% block navbarMobile %}
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <ul class="nav navbar-nav flex-column">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Products
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">New Products</a>
+            <a class="dropdown-item" href="#">Fixtures</a>
+            <a class="dropdown-item" href="#">Track Systems</a>
+            <a class="dropdown-item" href="#">Product Builder</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="#">Product Builder</a></li>
+        <li class="nav-item"><a href="#">Galleries</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Resources
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">New Products</a>
+            <a class="dropdown-item" href="#">Fixtures</a>
+            <a class="dropdown-item" href="#">Track Systems</a>
+            <a class="dropdown-item" href="#">Product Builder</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            About Us
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">New Products</a>
+            <a class="dropdown-item" href="#">Fixtures</a>
+            <a class="dropdown-item" href="#">Track Systems</a>
+            <a class="dropdown-item" href="#">Product Builder</a>
+          </div>
+        </li>
+      </ul>
+      <div class="mobile-utility">
+        <a href="#" class="bg-grey-200 d-block">Find a Representative</a>
+        <a href="#" class="bg-grey-200 d-block">Contact Us</a>
+        <a href="#" class="btn btn-square text-center d-block">Login</a>
+      </div>
+    {% endblock navbarMobile %}
+  </div>
+  <div class="collapse navbar-collapse d-lg-none" id="mobileSearch">
+    {% block navbarSearch %}
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    {% endblock navbarSearch %}
+  </div>
+  <div class="d-none d-lg-block">
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-wide">
+        <div class="navbar-nav d-flex align-items-center">
+          {% block primaryMenu %}
+          <div class="nav-item dropdown has-megamenu">
+
+
+
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="dropdownProducts"> Products  </a>
+            <div class="dropdown-menu megamenu" role="menu" aria-labelledby="dropdownProducts">
+              {% block ProductMegaNav %}
+                <div class="container">
+                  <div class="col-3">
+                    <ul class="tabs nav flex-column outer-tabs" id="outer-tabs">
+                      <li class="tabs-title open" data-tab-index="0" tabindex="0"><a href="#panel1v" aria-selected="true">New Products</a></li>
+                      <li class="tabs-title" data-tab-index="1" tabindex="0"><a href="#panel2v">Fixtures</a></li>
+                      <li class="tabs-title" data-tab-index="2" tabindex="0"><a href="#panel3v">Track Systems</a></li>
+                      <li class="tabs-title" data-tab-index="3" tabindex="0"><a href="#panel4v">Product Builder</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-9">
+                    <div class="tabs-content vertical outer-tabs">
+                      <div class="tabs-panel open" data-tab-index="0" id="panel1v">
+                        <div class="container">
+                          <div class="col-4">
+                            <ul class="tabs nav flex-column" id="inner-tabs">
+                              <li class="tabs-title open" data-tab-index="01" tabindex="0"><a href="#panel11v" aria-selected="true">LZ Zoom</a></li>
+                              <li class="tabs-title" data-tab-index="11" tabindex="0"><a href="#panel21v">Control Track</a></li>
+                              <li class="tabs-title" data-tab-index="21" tabindex="0"><a href="#panel31v">LP4</a></li>
+                              <li class="tabs-title" data-tab-index="31" tabindex="0"><a href="#panel41v">PowerTrack</a></li>
+                              <li class="direct-link"><a href="#">See all New Products ></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-8">
+                            <div class="tabs-content vertical inner-tabs">
+                              <div class="tabs-panel open" data-tab-index="01" id="panel11v">
+                                <p>LZ Zoom</p>
+                                <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                              </div>
+                              <div class="tabs-panel" data-tab-index="11" id="panel21v">
+                                <p>Control Track</p>
+                              </div>
+                              <div class="tabs-panel" data-tab-index="21" id="panel31v">
+                                <p>LP4</p>
+                                <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                              </div>
+                              <div class="tabs-panel" data-tab-index="31" id="panel41v">
+                                <p>PowerTrack</p>
+                                <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs-panel" data-tab-index="1" id="panel2v">
+                        <div class="container no-gutters">
+                          <div class="col-6">
+                            <ul class="tabs nav flex-column inner-tabs" id="inner-tabs">
+                              <li class="tabs-title open" data-tab-index="01" tabindex="0"><a href="#panel11v" aria-selected="true">Accent Lighting</a></li>
+                              <li class="tabs-title" data-tab-index="11" tabindex="0"><a href="#panel11v">Wall Wash</a></li>
+                              <li class="tabs-title" data-tab-index="21" tabindex="0"><a href="#panel11v">Projectors/Backlights</a></li>
+                              <li class="tabs-title" data-tab-index="31" tabindex="0"><a href="#panel11v">Linear</a></li>
+                              <li class="tabs-title" data-tab-index="31" tabindex="0"><a href="#panel11v">Dim to Warm</a></li>
+                              <li class="tabs-title" data-tab-index="31" tabindex="0"><a href="#panel11v">Color Change/Color Tunable</a></li>
+                              <li class="tabs-title" data-tab-index="31" tabindex="0"><a href="#panel11v">Adjustable Focus</a></li>
+                              <li class="tabs-title" data-tab-index="31" tabindex="0"><a href="#panel11v">Pendants</a></li>
+                              <li class="tabs-title" data-tab-index="31" tabindex="0"><a href="#panel11v">Retrofit LED Lighting</a></li>
+                              <li class="direct-link"><a href="#">See all Fixtures ></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-6">
+                            <div class="tabs-content vertical inner-tabs">
+                              <div class="tabs-panel open container" data-tab-index="01" id="panel11v">
+                                <div class="row">
+                                  <div class="col-6">
+                                    {% include "@atoms/image/_image.twig" with {
+                                      image: {
+                                        variant: 'primary',
+                                        src: paths.images ~ '/placeholder-light.png',
+                                      }
+                                    } %}
+                                  </div>
+                                  <div class="col-6">
+                                    <h2 class="text-brand-blue">Accent Lighting</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                                    <a class="text-brand-green-1" href="#">See Product Category ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs-panel" data-tab-index="2" id="panel3v">
+                        <p>Three</p>
+                        <p>Check me out! I'm a super cool Tab panel with text content!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="megamenu-footer d-flex align-items-center">
+                  <div class="container">
+                    <nav class="w-100">
+                      <ul class="nav">
+                        <li><h3><a>Product Builder</a></h3></li>
+
+                        <li><h3><a>Product Builder</a></h3></li>
+
+                        <li><h3><a>Product Builder</a></h3></li>
+                        <li class="ml-auto"><h3><a class="btn">See all Products ></a></h3></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              {% endblock ProductMegaNav %}
+            </div>
+          </div>
+          <div class="nav-item"><a class="nav-link" href="#"> Product Builder </a></div>
+          <div class="nav-item"><a class="nav-link" href="#"> Galleries </a></div>
+          {% block branding %}
+            <div class="brand mr-auto ml-auto">
+              <a class="navbar-brand text-center" href="#">
+                {% include '@atoms/svg/_svg.twig' with {
+                  svg: {
+                    svgpath: '@atoms/svg/svg/brand-logo-abbv.svg',
+                    colorOriginal: true,
+                  }
+                } %}
+              </a>
+            </div>
+          {% endblock branding %}
+          <div class="nav-item dropdown has-megamenu">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="dropdownResources"> Resources  </a>
+            <div class="dropdown-menu megamenu" role="menu" aria-labelledby="dropdownResources">
+              {% block ResourcesMegaNav %}
+                test
+              {% endblock ResourcesMegaNav %}
+            </div>
+          </div>
+          <div class="nav-item dropdown has-megamenu">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="dropdownAbout"> About Us  </a>
+            <div class="dropdown-menu megamenu" role="menu" aria-labelledby="dropdownAbout">
+              {% block AboutMegaNav %}
+                test1
+              {% endblock AboutMegaNav %}
+            </div>
+          </div>
+          <div class="nav-item"><a class="nav-link nav-search" href="#">Search
+              {% include '@atoms/svg/_svg--icon.twig' with {
+                svgicon: {
+                  svgname: 'search-solid',
+                },
+                view_box: '0 0 512 512',
+                paths: {
+                  images: asset_path|default('../../../assets/images'),
+                },
+              } %}</a></div>
+        {% endblock primaryMenu %}</div>
+      </div>
+    </nav>
+  </div>
+</header>
+

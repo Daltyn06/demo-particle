@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * featured-product
+ *
+ * Available variables for featured-product:
+ *  - featured_product.variable_name [variable_type]: Description of the variable. Example below.
+ *  - featured_product.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+
+<div class="featured-product bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 mb-3 mb-md-6 content-left">
+        {% block primary_image %}
+        {% include '@atoms/image/_image.twig' with {
+          image: featured_image,
+        } %}
+        {% endblock primary_image %}
+      </div>
+      <div class="col-12 col-md-6 position-relative content-right">
+        <div class="vertical-center">
+          {% if featured_product_location %}
+            <p class="featured-product--location text-uppercase text-brand-blue">{{ featured_product_location }}</p>
+          {% endif %}
+          <h2 class="featured-product--title h1">{{ featured_product_title }}</h2>
+          {% if featured_product_body %}
+            <p class="featured-product--body-text mb-3">{{ featured_product_body }}</p>
+          {% endif %}
+          {% block image_grid %}
+            {% if image_grid %}
+              <div class="featured-product--image-grid flex-column flex-md-row d-none d-lg-flex mb-5">
+                {% for image in image_grid %}
+                  {% include '@atoms/image/_image.twig' with {
+                    image: image.image,
+                    image_classes: image.image_classes,
+                  } %}
+                {% endfor %}
+              </div>
+            {% endif %}
+          {% endblock image_grid %}
+          {% block link %}
+            <a class="featured-product--link btn mb-5" href="{{ featured_product_link }}">{{ featured_product_link_text }}</a>
+          {% endblock link %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

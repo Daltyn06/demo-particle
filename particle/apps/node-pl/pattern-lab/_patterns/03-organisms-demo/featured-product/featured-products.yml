@@ -1,0 +1,8 @@
+featured_product:
+  example_var: This is an example var
+
+featured_product_demo_block:
+  title: featured-product Component
+  text:
+    lead: Add a quick description here.
+    summary: Add code examples here using <code>html code syntax</code>

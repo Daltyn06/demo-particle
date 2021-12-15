@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="69px" height="69px" viewBox="0 0 69 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>galleries_icon_font_awesome</title>
+    <g id="Pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LSI-3066_LSI_Web_Redesign_Homepage" transform="translate(-1079.000000, -943.000000)">
+            <g id="3-column-menu" transform="translate(200.000000, 943.000000)">
+                <g id="galleries_icon_font_awesome" transform="translate(879.000000, 0.000000)">
+                    <circle id="Oval" fill="#80C6B0" cx="34.5" cy="34.5" r="23.5"></circle>
+                    <circle id="Oval" stroke="#D1D1D1" stroke-width="0.5" cx="34.5" cy="34.5" r="34.25"></circle>
+                  <path fill="#ffffff"
+                        d="M265 263.5v.75c0 1.243-1.007 2.25-2.25 2.25H244.75c-1.243 0-2.25-1.007-2.25-2.25V252.25c0-1.243 1.007-2.25 2.25-2.25h.75v2.25H245.031a.281.281 0 0 0-.281.281v11.438a.281.281 0 0 0 .281.281h17.438a.281.281 0 0 0 .281-.281v-.469h2.25zm1.969-15.75H249.531a.281.281 0 0 0-.281.281v11.438a.281.281 0 0 0 .281.281h17.438a.281.281 0 0 0 .281-.281V248.031a.281.281 0 0 0-.281-.281zm.281-2.25c1.243 0 2.25 1.007 2.25 2.25v12c0 1.243-1.007 2.25-2.25 2.25H249.25c-1.243 0-2.25-1.007-2.25-2.25V247.75c0-1.243 1.007-2.25 2.25-2.25h18zM254.875 250.75c0 1.036-.839 1.875-1.875 1.875s-1.875-.839-1.875-1.875.839-1.875 1.875-1.875 1.875.839 1.875 1.875zm-3.375 4.5 1.852-1.852c.22-.22.576-.22.796 0L256 255.25l4.852-4.852c.22-.22.576-.22.796 0L265 253.75v3.75H251.5v-2.25z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

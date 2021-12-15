@@ -1,0 +1,197 @@
+/**
+ * Print styles for product builder.
+ */
+@page {
+  size: 216mm 279mm;
+  margin: 10mm 11mm 10mm 11mm;
+}
+body {
+  font-family: arial, helvetica, geneva, sans-serif;
+  font-size: 14px;
+  color: #0E0C14;
+  margin: 0;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.cf:after {
+  clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+.header {
+  color: #5F86AA;
+  padding-bottom: 15px;
+  font-size: 12px;
+  width: 100%;
+}
+.header .col1,
+.header .col2 {
+  float: left;
+  width: 50%;
+  display: block;
+}
+.header .col1 img {
+  width: 80%;
+  height: auto;
+}
+.header .col2 {
+  padding-top: 12px;
+  text-align: right;
+  font-size: 15px;
+  text-transform: none;
+}
+ul.list-unstyled,
+.pagination,
+.view-display-id-attachment_1 {
+  display: none;
+}
+.view.view-display-id-attachment_2 {
+  display: block !important;
+}
+.view.view-display-id-attachment_2 .views-field {
+  padding: 10px;
+}
+.view.view-display-id-attachment_2 .views-field-title {
+  width: 45%;
+}
+.view.view-display-id-attachment_2 .views-field-nothing-1 {
+  width: 15%;
+}
+.view.view-display-id-attachment_2 .views-field-field-project-products {
+  width: 40%;
+}
+.views-table {
+  border-collapse: collapse;
+}
+.views-table th {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: left;
+  font-size: 16px;
+  padding: 10px 0;
+}
+.views-table tbody tr {
+  border-bottom: 1px solid #D6D6D6;
+  vertical-align: top;
+}
+.views-table tbody td {
+  border-bottom: 1px solid #D6D6D6;
+  border-left: 0;
+  border-right: 0;
+}
+.builder-print .project {
+  margin-bottom: 25px;
+  font-size: 17px;
+  line-height: 23px;
+}
+.builder-print .prodheader {
+  background: #F6F6F6;
+  line-height: 55px;
+  font-size: 14px;
+  font-weight: bold;
+  border-top: 1px solid #D6D6D6;
+  border-bottom: 1px solid #D6D6D6;
+  width: 100%;
+}
+.builder-print .prodheader .col1,
+.builder-print .prodheader .col2,
+.builder-print .prodheader .col3 {
+  float: left;
+}
+.builder-print .prodheader .col1 {
+  width: 20%;
+}
+.builder-print .prodheader .col1 span {
+  padding-left: 20px;
+}
+.builder-print .prodheader .col2 {
+  width: 60%;
+}
+.builder-print .prodheader .col3 {
+  width: 20%;
+  text-align: right;
+}
+.builder-print .prodheader .col3 span {
+  padding-right: 20px;
+}
+.builder-print .products {
+  background: #F6F6F6;
+  line-height: 55px;
+  font-size: 15px;
+  border-top: 1px solid #D6D6D6;
+  border-bottom: 1px solid #D6D6D6;
+}
+.builder-print .products .col1,
+.builder-print .products .col2,
+.builder-print .products .col3 {
+  float: left;
+  line-height: 10px;
+}
+.builder-print .products .row {
+  page-break-inside: avoid;
+  font-size: 12px;
+  background: #fff;
+  border-bottom: 1px solid #D6D6D6;
+  padding: 20px 0;
+}
+.builder-print .products .col1 {
+  width: 20%;
+  text-transform: uppercase;
+}
+.builder-print .products .col1 span {
+  display: block;
+  padding-left: 20px;
+}
+.builder-print .products .col1 strong {
+  display: block;
+  padding-bottom: 5px;
+}
+.builder-print .products .col2 {
+  width: 60%;
+  line-height: 15px;
+  font-size: 12px;
+}
+.builder-print .products .col3 {
+  width: 20%;
+  text-align: center;
+}
+.builder-print .products .col3 span {
+  padding-right: 20px;
+}
+.builder-print .print-content .view {
+  display: none;
+}
+.builder-print .print-content .view.view-display-id-attachment_2 {
+  display: block !important;
+}
+.builder-print .print-content .views-table {
+  position: relative;
+}
+.builder-print .print-content .views-table th {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.no-project .info .col2 {
+  width: 90% !important;
+  padding: 0 20px !important;
+  float: none !important;
+  clear: left;
+}
+.no-project .info .row {
+  page-break-inside: avoid;
+  font-size: 12px;
+  background: #fff;
+  border-bottom: 1px solid #D6D6D6;
+  padding: 20px 0;
+}
+/*# sourceMappingURL=style.css.map */

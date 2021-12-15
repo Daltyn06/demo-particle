@@ -1,0 +1,23 @@
+{% embed '@organisms/footer/_footer.twig' %}
+  {% block footer_top %}
+    <div class="pb-5">
+      {{ page.footer_top }}
+    </div>
+  {% endblock footer_top %}
+  {% block footerFirst %}
+    {{ page.footer_first }}
+  {% endblock footerFirst %}
+  {% block footerSecond %}
+    {{ page.footer_second }}
+  {% endblock footerSecond %}
+  {% block footerThird %}
+    {{ page.footer_third }}
+  {% endblock footerThird %}
+  {% block footerFourth %}
+    {{ page.footer_fourth }}
+  {% endblock footerFourth %}
+  {% block footer_bottom %}
+    {{ page.footer_bottom }}
+  {% endblock footer_bottom %}
+
+{% endembed %}

@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * homepage-cta-icons
+ *
+ * Available variables for homepage-cta-icons:
+ *  - homepage_cta_icons.variable_name [variable_type]: Description of the variable. Example below.
+ *  - homepage_cta_icons.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+
+<div class="homepage-cta-icons">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        {% block card_1 %}
+          {% include '@molecules/card/_icon--card.twig' with icon_card_1 %}
+        {% endblock card_1 %}
+      </div>
+      <div class="col-12 col-md-4">
+        {% block card_2 %}
+          {% include '@molecules/card/_icon--card.twig' with icon_card_2 %}
+        {% endblock card_2 %}      </div>
+      <div class="col-12 col-md-4">
+        {% block card_3 %}
+          {% include '@molecules/card/_icon--card.twig' with icon_card_3 %}
+        {% endblock card_3 %}
+      </div>
+    </div>
+  </div>
+</div>

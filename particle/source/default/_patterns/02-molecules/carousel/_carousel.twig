@@ -1,0 +1,59 @@
+{#
+  Carousel
+
+  carousel_id: Integer: The ID of the Carousel.
+  carousel_controls: Boolean: Adds controls for the Carousel.
+  carousel_caption: Boolean: Adds the Image Caption in the Carousel Images Array.
+  carousel_indicators: Array: The Indicators and Associated Data.
+  carousel_images: Array: The Images and Associated Data.
+
+  see https://getbootstrap.com/docs/4.0/components/carousel/ for more details
+#}
+
+{% set carousel_id = random() %}
+{% set carousel_classes = [
+  'carousel',
+  'slide',
+  carousel_other_classes,
+] | sort | join(' ') | trim %}
+<div class="carousel--wrapper">
+  <div id="{{ 'carousel-' ~ carousel_id }}" class="{{ carousel_classes }}">
+    {% block carousel_items %}
+    {% for image in carousel_images %}
+      <div class="carousel--item">
+        {% include '@atoms/image/_image.twig' with {
+          image: image,
+        } %}
+        {% if image.carousel_caption %}
+          <div class="container">
+            <div class="row">
+              <div class="carousel--caption col-12 col-md-6 subtext">{{ image.carousel_caption }}</div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+    {% endblock carousel_items %}
+  </div>
+  {% block carousel_cta %}
+  {% if carousel_cta %}
+    <div class="carousel--cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h1 class="display-1 mb-4">{{ carousel_cta }}</h1>
+          {% if carousel_link_text and carousel_link_path %}
+            {% include "@atoms/button/_button.twig" with {
+              button_text: carousel_link_text,
+              button_element: 'a',
+              button_link: carousel_link_path,
+            } %}
+          {% endif %}
+        </div>
+      </div>
+
+    </div>
+    </div>
+  {% endif %}
+  {% endblock carousel_cta %}
+</div>

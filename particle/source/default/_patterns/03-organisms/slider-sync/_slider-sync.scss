@@ -1,0 +1,103 @@
+////
+/// Custom styles for slider-sync
+////
+@use 'sass:map';
+@use '../../../tokens/sass/utils';
+@use '../../01-atoms/svg/scss/utils' as svg;
+.slider-sync {
+  .thumbnails {
+    margin: 31px 40px;
+    .image-wrapper {
+      margin-left: 19px;
+      margin-right: 19px;
+      @include utils.bs-media-breakpoint-down(md) {
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+    }
+
+    .field--name-field-media-image, .field--name-thumbnail {
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        padding-bottom: 66%;
+        z-index: 0;
+      }
+      img {
+        object-fit: cover;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        margin-bottom: 0;
+        z-index: 1;
+        top: 0;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(utils.$bs-brand-blue, .65);
+        z-index: 2;
+      }
+    }
+    /* stylelint-disable */
+    .slick-current {
+      .field--name-field-media-image, .field--name-thumbnail {
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: transparent;
+        }
+      }
+    }
+    /* stylelint-enable */
+    .media--type-remote-video lite-youtube {
+      display: none;
+      height: 0;
+      visibility: hidden;
+    }
+
+    .slick-arrow {
+      height: 100%;
+      width: 40px;
+      @include svg.sprite('chevron-right', (color: utils.bs-theme-color('brand-green-2')));
+      background-color: utils.bs-theme-color('brand-green-3');
+      padding: 10px;
+      background-size: 30px;
+      &:hover {
+        @include svg.sprite('chevron-right', (color: utils.bs-theme-color('brand-green-1')));
+        background-size: 30px;
+        background-color: utils.bs-theme-color('brand-green-3');
+      }
+      &:before {
+        color: utils.bs-theme-color('brand-green-1');
+      }
+      &.slick-prev {
+        left: -40px;
+        transform: rotate(180deg) translateY(50%);
+      }
+      &.slick-next {
+        right: -40px;
+      }
+    }
+  }
+  .featured {
+    .field--name-thumbnail {
+      display: none;
+      height: 0;
+      visibility: hidden;
+    }
+    .slick-current lite-youtube{
+      max-width: 100%;
+      min-height: 540px;
+    }
+  }
+}

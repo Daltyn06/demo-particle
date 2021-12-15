@@ -1,0 +1,8 @@
+slider_sync:
+  example_var: This is an example var
+
+slider_sync_demo_block:
+  title: slider-sync Component
+  text:
+    lead: Add a quick description here.
+    summary: Add code examples here using <code>html code syntax</code>

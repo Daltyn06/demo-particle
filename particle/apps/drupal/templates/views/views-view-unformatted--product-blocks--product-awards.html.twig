@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+{% set asset_path = paths.assets ~ '/images' %}
+{% if rows is not empty %}
+  {% embed '@organisms/awards/_awards.twig' %}
+    {% block awards_list %}
+      <div class="awards-list awards-list--initial">
+        {% for row in rows|slice(0, 3) %}
+          {{- row.content -}}
+        {% endfor %}
+      </div>
+      {% if rows|length > 3 %}
+        <div class="awards-list awards-list--toggle closed">
+          {% for row in rows[3:] %}
+            {{- row.content -}}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endblock awards_list %}
+    {% block award_image %}
+      {% include '@atoms/image/_image.twig' with {
+        image: {
+          variant: 'primary',
+          src: asset_path ~ '/awards.png'
+        },
+      } %}
+    {% endblock award_image %}
+    {% block awards_link %}
+      {% if rows|length > 3 %}
+        <a class="btn awards-toggle closed">See more Awards</a>
+      {% else %}
+        <a href="/about-us/awards" class="btn">See all Awards</a>
+      {% endif %}
+    {% endblock awards_link %}
+  {% endembed %}
+{% endif %}
+

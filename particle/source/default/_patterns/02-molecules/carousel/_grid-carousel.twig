@@ -1,0 +1,45 @@
+{#
+Carousel
+
+carousel_id: Integer: The ID of the Carousel.
+carousel_controls: Boolean: Adds controls for the Carousel.
+carousel_caption: Boolean: Adds the Image Caption in the Carousel Images Array.
+carousel_indicators: Array: The Indicators and Associated Data.
+carousel_images: Array: The Images and Associated Data.
+
+see https://getbootstrap.com/docs/4.0/components/carousel/ for more details
+#}
+
+{% set carousel_id = random() %}
+{% set carousel_classes = [
+  'grid-carousel',
+  'slide',
+  carousel_other_classes,
+] | sort | join(' ') | trim %}
+<div class="grid-carousel--wrapper container">
+  <div id="{{ 'grid-carousel-' ~ carousel_id }}" class="{{ carousel_classes }}">
+    {% block carousel_items %}
+      {% for item_card in grid_carousel_cards %}
+        {% set item_card = {
+          card_border: 'none',
+          card_title: item_card.card_title,
+          card_text: item_card.card_text,
+          card_image_location: item_card.card_image_location,
+          card_image: item_card.card_image,
+          card_background: item_card.card_background,
+          card_style: item_card.card_style,
+          card_link: item_card.card_link,
+          card_link_text: item_card.card_link_text,
+          button_color: item_card.button_color,
+          button_text: item_card.button_text,
+          button_link: item_card.button_link,
+          card_other_classes: item_card.card_other_classes,
+          card_full_click: item_card.card_full_click,
+        } %}
+        <div class="{{ card_grid_classes }}">
+          {% include '@molecules/card/_card.twig' with item_card %}
+        </div>
+      {% endfor %}
+    {% endblock carousel_items %}
+  </div>
+</div>

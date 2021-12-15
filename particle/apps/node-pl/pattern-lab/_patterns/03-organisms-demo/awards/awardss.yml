@@ -1,0 +1,8 @@
+awards:
+  example_var: This is an example var
+
+awards_demo_block:
+  title: awards Component
+  text:
+    lead: Add a quick description here.
+    summary: Add code examples here using <code>html code syntax</code>

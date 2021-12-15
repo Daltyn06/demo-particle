@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * case-study
+ *
+ * Available variables for case-study:
+ *  - case_study.variable_name [variable_type]: Description of the variable. Example below.
+ *  - case_study.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+
+<div class="case-study bg-grey-800">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8 mb-3 mb-md-0 featured-image">
+        <h2 class="section-title ml-md-5 display-2 text-brand-blue vertical-offset-negative-1">{{ section_title }}</h2>
+        {% block featured_image %}
+          {% include '@atoms/image/_image.twig' with {
+            image: featured_image,
+          } %}
+        {% endblock featured_image %}
+      </div>
+      <div class="col-12 col-md-4 position-relative">
+        <div class="vertical-center">
+          <h2 class="case-study--title h1 text-white">{{ case_study_title }}</h2>
+          {% if case_study_location %}
+            <p class="case-study--location text-brand-blue">{{ case_study_location }}</p>
+          {% endif %}
+          {% if case_study_body %}
+            <p class="case-study--body-text text-white mb-3">{{ case_study_body }}</p>
+          {% endif %}
+          {% if case_study_link_text %}
+            <a class="case-study--link btn mb-5" href="{{ case_study_link }}">{{ case_study_link_text }}</a>
+          {% endif %}
+          {% block image_grid %}
+          {% if image_grid %}
+            <div class="case-study--image-grid flex-column flex-md-row d-none d-lg-flex">
+              {% for image in image_grid %}
+                {% include '@atoms/image/_image.twig' with {
+                  image: image.image,
+                } %}
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% endblock image_grid %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

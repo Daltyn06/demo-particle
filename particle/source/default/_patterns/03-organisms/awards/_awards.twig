@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * awards
+ *
+ * Available variables for awards:
+ *  - awards.variable_name [variable_type]: Description of the variable. Example below.
+ *  - awards.invert [bool]: When set, colors will be inverted for light display on dark background.
+ */
+#}
+
+<div class="awards">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        {% block award_image %}
+        {% include '@atoms/image/_image.twig' with {
+          image: {
+            variant: 'primary',
+            src: asset_path|default('../../../assets/images') ~ '/awards.png'
+          },
+        } %}
+        {% endblock award_image %}
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="mb-4">
+          {% block awards_list %}
+            {% for award in awards %}
+              {% include '@molecules/card/_icon--card.twig' with {
+                card_title: award.card_title,
+                card_text: award.card_text,
+                card_icon: award.card_icon,
+                card_border: 'none',
+                text_color: award.text_color,
+              } %}
+            {% endfor %}
+          {% endblock awards_list %}
+        </div>
+        {% block awards_link %}
+        <a href="/about-us/awards" class="btn">See all Awards</a>
+        {% endblock awards_link %}
+      </div>
+    </div>
+  </div>
+</div>

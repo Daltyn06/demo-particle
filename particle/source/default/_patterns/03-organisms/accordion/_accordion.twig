@@ -1,0 +1,41 @@
+{#
+/**
+ * @file Accordion!
+ * Documenting Accordion Examples from Bootstrap.
+ *
+ * Available variables:
+ * - accordion_id: Integer: A unique numerical ID for the accordion.
+ * - accordion_card_list: Array: A list of cards and their values.
+ * - card_header: String: The header on the card.
+ * - card_text: String: The text on the card.
+ * - card_expanded: String: The default collapse state on the card.
+ *
+ * Accordions combine Bootstrap's Card and Collapse. See below for more details:
+ *
+ * @see https://getbootstrap.com/docs/4.0/components/collapse/
+ * @see https://getbootstrap.com/docs/4.0/components/card/
+ */
+#}
+
+{% set accordion_id = random() %}
+
+<div class="accordion" id="{{ 'accordion-' ~ accordion_id }}">
+  {% for item in accordion_card_list %}
+
+    {% set expanded = {
+      aria: item.accordion_expanded ? 'true' : 'false',
+      show: item.accordion_expanded ? 'show' : '',
+    } %}
+
+    {% if item.accordion_expanded == false %}
+      {% set class_expanded = 'collapsed' %}
+    {% endif %}
+
+    <a href="" class="accordion--header {{ class_expanded }}" data-toggle="collapse" data-target="{{ '#collapse-' ~ loop.index }}" aria-expanded="{{ expanded.aria }}" aria-controls="{{ 'collapse-' ~ loop.index }}">
+      {{ item.accordion_header }}
+    </a>
+    <div id="{{ 'collapse-' ~ loop.index }}" class="collapse accordion--body {{ expanded.show }}" aria-labelledby="{{ 'heading-' ~ loop.index }}" data-parent="{{ '#accordion-' ~ accordion_id }}">
+        {{ item.accordion_text }}
+    </div>
+  {% endfor %}
+</div>

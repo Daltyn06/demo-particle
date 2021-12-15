@@ -1,0 +1,78 @@
+{#
+/**
+ * @file
+ * Default theme implementation to each level of menu.
+ */
+#}
+{% import _self as menu %}
+
+{{ menu.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% set random_id = random() %}
+  {% set random_id_2 = random() %}
+
+<div class="container">
+  <div class="d-flex w-100">
+    <ul role="tablist" class="tabs nav nav-tabs flex-column level-{{ items|first.menu_level }}" id="level-{{ items|first.menu_level }}-{{ random_id }}">
+      {% for key, item in items if key|first != '#' %}
+        {% set index = item.title|clean_class ~ '--' ~ loop.index ~ random_id_2 %}
+        {% set rendered_content = item.content|without('') %}
+        {#
+          We have to merge in the Menu Link Attributes manually
+          https://www.drupal.org/project/menu_item_extras/issues/3024578#comment-13375060
+        #}
+        {% if item.url.getOption('attributes') %}
+          {% set link_attr = create_attribute(item.url.getOption('attributes')) %}
+        {% else %}
+          {% set link_attr = create_attribute() %}
+        {% endif %}
+        {%
+          set link_attr = link_attr.addClass([
+            'nav-link',
+          ])
+        %}
+
+        <li class="tab-title nav-item">
+          {% if rendered_content|render|striptags|trim|spaceless %}
+            <a role="tab" aria-expanded="false" {{ link_attr }} id="{{ index }}-tab" data-toggle="tab" data-target="#{{ index }}" href="{{ item.url }}">
+          {% else %}
+            <a {{ link_attr }} id="{{ index }}-tab" href="{{ item.url }}">
+          {% endif %}
+            {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    {# {% if items|render|trim is not empty %} #}
+      <div class="tab-content level-{{ items|first.menu_level }}">
+
+        {% for key, item in items if key|first != '#' %}
+        {#
+          We have to merge in the Menu Link Attributes manually
+          https://www.drupal.org/project/menu_item_extras/issues/3024578#comment-13375060
+        #}
+        {% if item.url.getOption('attributes') %}
+          {% set link_attr = create_attribute(item.url.getOption('attributes')) %}
+        {% else %}
+          {% set link_attr = create_attribute() %}
+        {% endif %}
+        {%
+          set link_attr = link_attr.addClass([
+            'tabs-panel',
+          ])
+        %}
+
+          {% set index = item.title|clean_class ~ '--' ~ loop.index ~ random_id_2 %}
+          {% set rendered_content = item.content|without('') %}
+          {% if rendered_content|render|striptags|trim|spaceless %}
+            <div {{ link_attr }} id="{{ index }}" aria-expanded="false">
+              {{ rendered_content }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {# {% endif %} #}
+  </div>
+</div>
+{% endmacro %}

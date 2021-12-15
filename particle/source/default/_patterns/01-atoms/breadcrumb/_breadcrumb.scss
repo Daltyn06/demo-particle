@@ -1,0 +1,18 @@
+// @use 'sass:map';
+// @use '../../../tokens/sass/utils';
+
+// .breadcrump-wrapper {
+//   background-color: utils.$bs-grey-100;
+// }
+
+.breadcrumb {
+  min-height: 50px;
+  margin-bottom: 0;
+
+  .breadcrumb-item {
+    font-size: 14px;
+    a {
+      text-decoration: underline;
+    }
+  }
+}

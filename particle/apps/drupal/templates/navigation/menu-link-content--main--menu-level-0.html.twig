@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a menu link entity entity.
+ *
+ * Available variables:
+ * - menu_link_content: Menu link entity.
+ * - show_item_link: Indicator for menu item link.
+ *
+ * @see template_preprocess_menu_link_content()
+ *
+ * @ingroup themeable
+ */
+#}
+{% import _self as menu %}
+
+{{ menu.build_menu_link_content(attributes, menu_link_content, show_item_link, content, elements) }}
+
+{% macro build_menu_link_content(attributes, menu_link_content, show_item_link, content, elements) %}
+  {%
+    set attributes = attributes.addClass([
+      'megamenu',
+      'dropdown-menu',
+      elements['#menu_level'] is defined ? 'level-' ~ elements['#menu_level'],
+    ]).setAttribute('aria-labelledby', 'nav-' ~ menu_link_content.getTitle()|clean_class)
+    .removeClass('menu_link_content', 'menu-link-contentmain')
+  %}
+
+  <div{{ attributes }}>
+    {% if show_item_link %}
+      {{ link(menu_link_content.getTitle(), menu_link_content.getUrlObject()) }}
+    {% endif %}
+    {% if content %}
+      <div class="container position-relative d-none d-md-block">
+        <div class="close-nav">X</div>
+      </div>
+      {{ content|without('field_icon') }}
+      <div class="megamenu-footer d-none d-lg-flex align-items-center">
+        <div class="container">
+          <nav class="w-100">
+            <ul class="nav">
+              <li><h3><a href="/products/product-builder">Product Builder</a></h3></li>
+
+              <li><h3><a href="/delivered-lumens">Delivered Lumens</a></h3></li>
+
+              <li><h3><a class="border-right-0" href="/quick-ship-express">quick Ship Express</a></h3></li>
+              <li class="ml-auto"><h3 class="megamenu-footer--button">{{ link(menu_link_content.getTitle(), menu_link_content.getUrlObject()) }}</h3></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}

@@ -1,0 +1,8 @@
+grid_half:
+  example_var: This is an example var
+
+grid_half_demo_block:
+  title: grid-half Component
+  text:
+    lead: Add a quick description here.
+    summary: Add code examples here using <code>html code syntax</code>

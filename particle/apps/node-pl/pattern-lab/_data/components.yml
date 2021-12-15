@@ -1,0 +1,837 @@
+####
+# ** CAUTION **
+#
+# THIS DATA IS CURRENTLY ONLY REFRESHED ON A TWIG / JS CHANGE.
+# CHANGES MADE ONLY IN THIS FILE ARE NOT REGISTERED.
+#
+# Use this file to register global data for components that need to share data.
+#
+####
+
+# Protons Data
+
+## Table
+table:
+  header:
+    - 'First Name'
+    - 'Last Name'
+    - 'Username'
+  content:
+    - first_name: 'Antoinette'
+      last_name: 'Breitenberg'
+      username: 'doloremque'
+    - first_name: 'Kamryn'
+      last_name: 'Cruickshank'
+      username: 'et'
+    - first_name: 'Oswald'
+      last_name: 'McGlynn'
+      username: 'iure'
+
+## Border Radius
+border_radius_image:
+  variant: 'primary'
+  style: 'thumbnail'
+  placeholder: true
+
+# Organisms Data - Used in Organisms and Higher
+
+## Article
+article_demo:
+  title: 'Lucidus'
+  body:
+    '<p>Cogo haero jus pala patria proprius turpis valde wisi. Eu feugiat laoreet si usitas valde vulputate. Bene dolus gilvus hos pala quibus ulciscor voco. Ad camur incassum ymo.</p>
+    <p>Caecus esca iustum lobortis nimis quibus uxor. Aliquip aptent conventio illum singularis turpis ullamcorper validus. Appellatio illum luptatum secundum suscipere. Amet dolor duis esca pecus plaga verto. Brevitas caecus huic melior modo nibh nunc. Aptent at bene exputo loquor os. Aliquam cui diam esse ideo melior minim premo quis vicis. Abdo accumsan autem. Cui jugis quia tincidunt. Appellatio nibh quidne uxor.</p>
+    <p>Cui incassum loquor paratus ratis refero uxor volutpat. Adipiscing consequat enim erat imputo magna neque probo rusticus secundum. Augue commodo consequat conventio dolor elit minim molior similis torqueo. Et gemino interdico nutus praesent probo scisco tamen utrum. Amet feugiat odio pneum quidem sagaciter voco. Hendrerit minim quibus si.</p>
+    <p>Haero lobortis odio proprius. Exputo incassum iriure. Similis validus vel. Acsi eligo eros eum exerci feugiat haero huic oppeto quadrum. Capto luctus ludus neo quis sit ulciscor.</p>
+    <p>Consequat dignissim genitus oppeto. Laoreet luctus os proprius sino sit tation utrum. Commoveo interdico melior oppeto ratis tincidunt. Capto minim natu ulciscor usitas. Molior sudo ut veniam. Abluo aliquip cogo gilvus modo quae ratis singularis ullamcorper vereor.</p>
+    <p>Blandit cui hos mauris. Causa elit esse et paulatim. Abdo cogo dolor enim inhibeo ludus mauris saluto vindico. Commoveo distineo esse gravis ille lobortis occuro oppeto ulciscor veniam.</p>
+    <p>Camur ea elit facilisis haero interdico loquor venio. Accumsan antehabeo decet imputo os. Aptent esse eu hos luctus nobis similis ullamcorper. Appellatio comis damnum ibidem praesent quia quis verto. Aptent damnum duis esca ibidem ludus nulla pneum velit venio. Abigo at eum meus pertineo ratis secundum ulciscor volutpat vulputate. Conventio cui ea exputo inhibeo iriure magna mauris neque ratis.</p>
+    <p>Conventio damnum eros pala pertineo velit verto. Adipiscing eum jus pertineo tum turpis ulciscor ullamcorper vereor volutpat. Genitus importunus lenis modo natu nimis nunc populus te.</p>
+    <p>Singularis sit torqueo tum validus. Fere quis vindico. Duis iusto occuro paratus qui scisco valetudo. Abdo decet dolor ea erat ex nulla ratis vel veniam. Blandit diam duis exerci proprius quidne tation venio vindico. Abbas aliquam commodo iaceo pagus quis sed tego. Feugiat pala sagaciter turpis ullamcorper vero. Ibidem neo ullamcorper vereor. Ad amet camur consectetuer dolor facilisis feugiat ideo quibus.</p>
+    <p>Dolore erat huic iusto melior pneum. Gemino quibus singularis. Bene comis obruo quis wisi. Hendrerit illum imputo lucidus olim os. Ex natu tamen. Diam dolor inhibeo lenis macto mauris validus. Acsi pagus pala paratus pecus quis sed sudo.</p>
+    <p>Brevitas commoveo jus. Accumsan commoveo hos imputo molior odio proprius te. Caecus luctus neque nutus paratus. Brevitas capto euismod ex jus ludus mauris mos tego wisi.</p>
+    <p>Antehabeo appellatio humo interdico olim os qui. Aptent dolor gravis melior oppeto si veniam vindico. Imputo secundum singularis sit voco. Acsi cui ille lucidus molior praemitto qui quidne tamen. Euismod nulla plaga virtus. Accumsan acsi dolore et euismod quis. Caecus et lobortis tamen. Abico blandit diam huic plaga ratis similis velit veniam. Cogo patria refero.</p>'
+  author_name: 'Joe P. Author'
+  date: '11/19/2017 - 08:30'
+  tags:
+    - word: 'Lorem'
+      url: '#'
+    - word: 'Ipsum'
+      url: '#'
+    - word: 'Dolor'
+      url: '#'
+  image:
+    variant: 'primary'
+    src: ''
+    alt: ''
+    style: 'small'
+    placeholder: true
+
+## Footer
+footer:
+  slogan: 'Powered by <a href="http://patternlab.io/" target="_blank">Pattern Lab</a>'
+
+## Navbar
+navbar_other_classes:
+  - navbar-expand-lg
+  - navbar-light
+  - bg-light
+
+breadcrumb_demo:
+  breadcrumb:
+    - text: 'Home'
+      url: '/home'
+    - text: 'First'
+      url: '/first'
+    - text: 'Second'
+      url: '/second'
+
+pagination_4:
+  pagination_title: 'Page Navigation Example #2'
+  pagination_size: 'lg'
+  page_icon: TRUE
+  page_items:
+    - pages:
+        title: 1
+        link: '#'
+
+navbar_demo:
+  brand_link: #
+  brand_text: Navbar
+  id: navbarSupportedContent
+
+  items:
+    - nav_item_text: Home
+      nav_item_link_classes: active
+    - nav_item_dropdown: true
+      buttonless_dropdown: true
+      dropdown_text: Dropdown
+      unique_classes: nav-link
+      unique_attributes: href="#"
+      button_element: a
+      dropdown_element: li
+      dropdown_other_classes: nav-item
+      dropdown_menu_items:
+        - dropdown_menu_item_text: Action
+        - dropdown_menu_item_text: Another Action
+        - dropdown_menu_item_text: Something else here
+    - nav_item_text: Link
+      nav_item_link_classes: ''
+    - nav_item_text: Disabled
+      nav_item_link_classes: disabled
+
+carousel_1:
+  carousel_other_classes: 'carousel--homepage'
+  carousel_cta: 'Connecting Spaces With Light'
+  carousel_link_text: 'Learn about LSI'
+  carousel_link_path: '#'
+  carousel_images:
+    - active: TRUE
+      src: '../../../assets/images/Hero_background-Mystic-Seaport-Museum.jpg'
+      variant: 'primary'
+      carousel_caption: 'Mystic Seaport Museum'
+    - active: FALSE
+      src: '../../../assets/images/Hero_background-American-Museum-of-Natural-History.jpg'
+      variant: 'primary'
+      carousel_caption: 'American Museum of Natural History'
+    - active: FALSE
+      src: '../../../assets/images/Hero_background-St-Monica-Church.jpg'
+      variant: 'primary'
+      carousel_caption: 'St. Monica Church'
+
+icon_card_1:
+  card_title: What's New
+  card_text: Lorem ipsum dolor sit amet, consectetur.
+  card_icon: 'comments-solid'
+  card_border: 'none'
+  text_color: 'white'
+
+icon_card_2:
+  card_title: Product Builder
+  card_text: Lorem ipsum dolor sit amet, consectetur.
+  card_icon: 'tools-solid'
+  card_border: 'none'
+  text_color: 'white'
+
+icon_card_3:
+  card_title: Galleries
+  card_text: Lorem ipsum dolor sit amet, consectetur.
+  card_icon: 'images-regular'
+  card_border: 'none'
+  text_color: 'white'
+
+product_grid:
+  row_classes: 'col-md-4'
+  card_grid_rows:
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'Details >'
+      card_image_location: top
+      card_background: 'off-white'
+      card_style: 'default'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'Details >'
+      card_image_location: top
+      card_background: 'off-white'
+      card_style: 'default'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'Details >'
+      card_image_location: top
+      card_background: 'off-white'
+      card_style: 'default'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'Details >'
+      card_image_location: top
+      card_background: 'off-white'
+      card_style: 'default'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'Details >'
+      card_image_location: top
+      card_background: 'off-white'
+      card_style: 'default'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'Details >'
+      card_image_location: top
+      card_background: 'off-white'
+      card_style: 'default'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+
+homepage_case_study:
+  case_study_title: 'The National Portrait Gallery'
+  case_study_location: 'Washington D.C | United States'
+  case_study_body: 'Lorem ipsum dolor sit amet, consectetur advisi adipiscing elit, sed do eiusmod tempor incididunt.'
+  case_study_link: '#'
+  case_study_link_text: 'Get the Details'
+  section_title: 'Case Study'
+  featured_image:
+    variant: 'primary'
+    src: '../../../assets/images/portrait-gallery-1260x2400.png'
+    alt: ''
+    style: 'featured'
+  image_grid:
+    - image:
+        variant: 'primary'
+        src: '../../../assets/images/obama-1260x2400.png'
+        alt: ''
+        style: 'thumbnail'
+    - image:
+        variant: 'primary'
+        src: '../../../assets/images/dual-lights.png'
+        alt: ''
+        style: 'thumbnail'
+    - image:
+        variant: 'primary'
+        src: '../../../assets/images/portrait-gallery2-1260x2400.png'
+        alt: ''
+        style: 'thumbnail'
+
+homepage_featured_product:
+  featured_product_title: 'LZ Zoom Series'
+  featured_product_location: 'Featured Product'
+  featured_product_body: 'Lorem ipsum dolor sit amet, consectetur advisi adipiscing elit, sed do eiusmod tempor incididunt.'
+  featured_product_link: '#'
+  featured_product_link_text: 'Get the Details'
+  featured_image:
+    variant: 'primary'
+    src: '../../../assets/images/featured-product.png'
+    alt: ''
+    style: 'featured'
+  image_grid:
+    - image:
+        variant: 'primary'
+        src: '../../../assets/images/product-teaser1.png'
+        alt: ''
+        style: 'thumbnail'
+        image_classes: 'round'
+    - image:
+        variant: 'primary'
+        src: '../../../assets/images/product-teaser2.png'
+        alt: ''
+        style: 'thumbnail'
+        image_classes: 'round'
+    - image:
+        variant: 'primary'
+        src: '../../../assets/images/product-teaser3.png'
+        alt: ''
+        style: 'thumbnail'
+        image_classes: 'round'
+
+homepage_product_builder:
+  title: 'Try our Product Builder'
+  sub_title: 'Product Builder'
+  body: 'Configure a fixture to your specifications then export the details into a PDF document'
+  cta_title: 'Lets Get Started'
+  cta_body: 'The first question or guiding statement goes right here?'
+  background_image:
+    variant: 'bg'
+    src: '../../../assets/images/bg-pattern.png'
+    alt: ''
+    style: 'bg'
+
+homepage_video_series:
+  grid_carousel_cards:
+    - card_title: 'LZ Zoom Series Demo'
+      card_text: 'Optional Video Details | 03.033.21'
+      card_image_location: top
+      card_style: 'secondary'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_full_click: true
+      card_other_classes: 'px-3'
+    - card_title: 'CONTROLTrack Demo'
+      card_text: 'Optional Video Details | 03.033.21'
+      card_image_location: top
+      card_style: 'secondary'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_full_click: true
+      card_other_classes: 'px-3'
+    - card_title: 'LumeLEX 2044 Series Demo (but title could wrap to two lines)'
+      card_text: 'Optional Video Details | 03.033.21'
+      card_image_location: top
+      card_style: 'secondary'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_full_click: true
+      card_other_classes: 'px-3'
+    - card_title: 'LZ Zoom Series Demo'
+      card_text: 'Optional Video Details | 03.033.21'
+      card_image_location: top
+      card_style: 'secondary'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_full_click: true
+      card_other_classes: 'px-3'
+    - card_title: 'CONTROLTrack Demo'
+      card_text: 'Optional Video Details | 03.033.21'
+      card_image_location: top
+      card_style: 'secondary'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_full_click: true
+      card_other_classes: 'px-3'
+    - card_title: 'LumeLEX 2044 Series Demo (but title could wrap to two lines)'
+      card_text: 'Optional Video Details | 03.033.21'
+      card_image_location: top
+      card_style: 'secondary'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_other_classes: 'px-3'
+      card_full_click: true
+
+homepage_infocus:
+  grid_carousel_cards:
+    - card_title: 'Title of focus article or gallery'
+      card_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…'
+      card_image_location: top
+      card_style: 'secondary--alt'
+      card_background: 'transparent'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/dual-lights.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_link_text: 'Read More >'
+      card_full_click: true
+      card_other_classes: 'px-3'
+    - card_title: 'Title of focus article or gallery'
+      card_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…'
+      card_image_location: top
+      card_style: 'secondary--alt'
+      card_background: 'transparent'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/dual-lights.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_link_text: 'Read More >'
+      card_full_click: true
+      card_other_classes: 'px-3'
+    - card_title: 'Title of focus article or gallery'
+      card_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…'
+      card_image_location: top
+      card_style: 'secondary--alt'
+      card_background: 'transparent'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/dual-lights.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_link_text: 'Read More >'
+      card_full_click: true
+      card_other_classes: 'px-3'
+    - card_title: 'Title of focus article or gallery'
+      card_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…'
+      card_image_location: top
+      card_style: 'secondary--alt'
+      card_background: 'transparent'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/dual-lights.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_link_text: 'Read More >'
+      card_full_click: true
+      card_other_classes: 'px-3'
+    - card_title: 'Title of focus article or gallery'
+      card_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…'
+      card_image_location: top
+      card_style: 'secondary--alt'
+      card_background: 'transparent'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/dual-lights.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_link_text: 'Read More >'
+      card_full_click: true
+      card_other_classes: 'px-3'
+    - card_title: 'Title of focus article or gallery'
+      card_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor…'
+      card_image_location: top
+      card_style: 'secondary--alt'
+      card_background: 'transparent'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/dual-lights.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_link_text: 'Read More >'
+      card_full_click: true
+      card_other_classes: 'px-3'
+
+productlanding_featured:
+  subtitle: 'Highlighted Product'
+  title: 'LX2044 Series'
+  subheading: 'Short Subhead Goes right here to describe product further and possibly goes to three lines'
+  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+  cta_button:
+    button_text: 'See Details'
+    button_link: '#'
+  icon_button:
+    button_text: 'Launch Product Builder'
+    button_outline: true
+    button_link: '#'
+    svgname: 'tools-solid'
+    viewbox: '0 0 512 512'
+
+product_grid_landing:
+  row_classes: 'col-md-4'
+  card_grid_rows:
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'See More >'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'secondary'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'See More >'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'secondary'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'See More >'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'secondary'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'See More >'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'secondary'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'See More >'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'secondary'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'See More >'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'secondary'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'See More >'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'secondary'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'See More >'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'secondary'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+    - card_title: 'Track Systems'
+      card_text: 'Lorem ipsum dolor sit amet, consectetui adipiscing elit, sedo.'
+      card_link_text: 'See More >'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'secondary'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+
+accordion_1:
+  accordion_card_list:
+    - accordion_header: 'Collapsible Group Item #1'
+      accordion_text: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."
+      accordion_expanded: true
+    - accordion_header: 'Collapsible Group Item #2'
+      accordion_text: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."
+      accordion_expanded: false
+    - accordion_header: 'Collapsible Group Item #3'
+      accordion_text: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."
+      accordion_expanded: false
+
+icon_button_share:
+  button_text: 'Share Product'
+  button_outline: true
+  button_link: '#'
+  svgname: 'share-solid'
+  viewbox: '0 0 512 512'
+
+icon_button_builder:
+  button_text: 'Launch Product Builder'
+  button_outline: false
+  button_link: '#'
+  svgname: 'tools-solid'
+  viewbox: '0 0 512 512'
+
+icon_button_case_study:
+  button_text: 'View Case Study'
+  button_outline: true
+  button_link: '#'
+
+icon_button_share_gallery:
+  button_text: 'Share Gallery'
+  button_outline: false
+  button_link: '#'
+  svgname: 'share-solid'
+  viewbox: '0 0 512 512'
+
+product_featured_slider:
+  thumbnail_list:
+    - image:
+        variant: 'primary'
+        src: 'https://picsum.photos/840/561?random=1'
+        placeholder: false
+        style: 'featured_large'
+    - image:
+        variant: 'primary'
+        src: 'https://picsum.photos/840/561?random=2'
+        placeholder: false
+        style: 'featured_large'
+    - image:
+        variant: 'primary'
+        src: 'https://picsum.photos/840/561?random=3'
+        placeholder: false
+        style: 'featured_large'
+    - image:
+        variant: 'primary'
+        src: 'https://picsum.photos/840/561?random=4'
+        placeholder: false
+        style: 'featured_large'
+
+gallerylanding_featured:
+  case_study_title: 'Whitney Museum of American Art'
+  case_study_location: 'New York, NY | United States'
+  case_study_body: 'Each piece of artwork is carefully lit through a combination of daylight and LED light sources.'
+  case_study_link: '#'
+  case_study_link_text: 'Get to Gallery'
+  section_title: 'Featured Gallery'
+  featured_image:
+    variant: 'primary'
+    src: '../../../assets/images/portrait-gallery-1260x2400.png'
+    alt: ''
+    style: 'featured'
+  image_grid:
+    - image:
+        variant: 'primary'
+        src: '../../../assets/images/obama-1260x2400.png'
+        alt: ''
+        style: 'thumbnail'
+    - image:
+        variant: 'primary'
+        src: '../../../assets/images/dual-lights.png'
+        alt: ''
+        style: 'thumbnail'
+    - image:
+        variant: 'primary'
+        src: '../../../assets/images/portrait-gallery2-1260x2400.png'
+        alt: ''
+        style: 'thumbnail'
+
+gallery_list_landing:
+  row_classes: 'col-md-6'
+  card_grid_rows:
+    - card_title: 'Track Systems'
+      card_image_location: left
+      card_background: 'off-white'
+      card_style: 'list'
+      card_title_element: 'h4'
+      card_link: '#'
+      card_full_click: true
+    - card_title: 'Track Systems'
+      card_image_location: left
+      card_background: 'off-white'
+      card_style: 'list'
+      card_title_element: 'h4'
+      card_full_click: false
+    - card_title: 'Track Systems'
+      card_image_location: left
+      card_background: 'off-white'
+      card_style: 'list'
+      card_title_element: 'h4'
+      card_link: '#'
+      card_full_click: true
+    - card_title: 'Track Systems'
+      card_image_location: left
+      card_background: 'off-white'
+      card_style: 'list'
+      card_title_element: 'h4'
+      card_full_click: false
+    - card_title: 'Track Systems'
+      card_image_location: left
+      card_background: 'off-white'
+      card_style: 'list'
+      card_title_element: 'h4'
+      card_link: '#'
+      card_full_click: true
+    - card_title: 'Track Systems'
+      card_image_location: left
+      card_background: 'off-white'
+      card_style: 'list'
+      card_title_element: 'h4'
+      card_full_click: false
+    - card_title: 'Track Systems'
+      card_image_location: left
+      card_background: 'off-white'
+      card_style: 'list'
+      card_title_element: 'h4'
+      card_link: '#'
+      card_full_click: true
+    - card_title: 'Track Systems'
+      card_image_location: left
+      card_background: 'off-white'
+      card_style: 'list'
+      card_title_element: 'h4'
+      card_full_click: false
+    - card_title: 'Track Systems'
+      card_image_location: left
+      card_background: 'off-white'
+      card_style: 'list'
+      card_title_element: 'h4'
+      card_link: '#'
+      card_full_click: true
+    - card_title: 'Track Systems'
+      card_image_location: left
+      card_background: 'off-white'
+      card_style: 'list'
+      card_title_element: 'h4'
+      card_full_click: false
+
+awards:
+  - card_title: 'ADEX Platinum Award'
+    card_text: 'LZ ZOOM Series'
+    card_icon: 'trophy-solid'
+    card_border: 'none'
+  - card_title: 'DALI Lighting Award'
+    card_text: 'Best Small Indoor Project | Chicago History Museum'
+    card_icon: 'trophy-solid'
+    card_border: 'none'
+  - card_title: 'MUSE Creative Awards'
+    card_text: 'Platinum Award - Sazerac House Museum'
+    card_icon: 'trophy-solid'
+    card_border: 'none'
+
+gallery_detail:
+  card_grid_rows:
+    - card_title: 'Track Systems'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'overlay-title'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_full_click: true
+    - card_title: 'Track Systems'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'overlay-title'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_full_click: true
+    - card_title: 'Track Systems'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'overlay-title'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_full_click: true
+    - card_title: 'Track Systems'
+      card_image_location: top
+      card_background: 'transparent'
+      card_style: 'overlay-title'
+      card_title_element: 'h4'
+      card_image:
+        variant: 'primary'
+        src: '../../../assets/images/placeholder.png'
+        alt: ''
+        style: 'card'
+      card_link: '#'
+      card_full_click: true
+
+node_image:
+  variant: 'primary'
+  src: 'https://picsum.photos/840/561?random=1'
+  placeholder: false
+  style: 'featured_large'

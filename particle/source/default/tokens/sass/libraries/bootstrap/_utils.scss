@@ -1,0 +1,84 @@
+////
+/// Bootstrap non-printing customization
+////
+
+// Build in modules
+@use 'sass:map';
+// Custom Particle vars
+@use '../../utils/variables';
+// Bootstrap: functions must exist before variables
+@import '~bootstrap/scss/functions';
+
+// Bootstrap grays override
+// @see ~bootstrap/scss/variables:$grays
+$gray-100: map.get(variables.$colors, 'gray-light');
+$gray-500: map.get(variables.$colors, 'gray-medium');
+$gray-800: map.get(variables.$colors, 'gray-dark');
+$black: map.get(variables.$colors, 'black');
+$white: map.get(variables.$colors, 'white');
+$off-white: map.get(variables.$colors, 'off-white');
+$brand-blue: map.get(variables.$colors, 'brand-blue');
+
+// Bootstrap theme colors override
+// @see ~bootstrap/scss/variables:$theme-color
+$theme-colors: (
+  'white': map.get(variables.$colors, 'white'),
+  'off-white': map.get(variables.$colors, 'off-white'),
+  'black': map.get(variables.$colors, 'black'),
+  'grey-100': map.get(variables.$colors, 'gray-light'),
+  'grey-500': map.get(variables.$colors, 'gray-medium'),
+  'grey-800': map.get(variables.$colors, 'gray-dark'),
+  'primary': map.get(variables.$colors, 'brand-blue'),
+  'secondary': map.get(variables.$colors, 'brand-green-1'),
+  'info': map.get(variables.$colors, 'brand-blue-tint-40'),
+  'brand-blue-lt': map.get(variables.$colors, 'brand-blue-lt'),
+  'brand-blue': map.get(variables.$colors, 'brand-blue'),
+  'brand-blue-tint-20': map.get(variables.$colors, 'brand-blue-tint-20'),
+  'brand-blue-tint-40': map.get(variables.$colors, 'brand-blue-tint-40'),
+  'brand-green-1': map.get(variables.$colors, 'brand-green-1'),
+  'brand-green-2': map.get(variables.$colors, 'brand-green-2'),
+  'brand-green-3': map.get(variables.$colors, 'brand-green-3'),
+);
+
+// Bootstrap spacers override
+// Bootstrap Spacers use $spacer var of 1rem and assumes browser 16px default.
+// The values in $spacers map adds the value to Bootstrap's utility spacers.
+// @see ~bootstrap/scss/variables:($spacer|$spacers)
+$spacers: (
+  6: 1rem * 4,
+  7: 1rem * 5,
+  8: 1rem * 6,
+  9: 1rem * 7.5,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+$grid-gutter-width:           42px;
+$breadcrumb-divider:          quote(">");
+// Bootstrap font family overrides
+// @see ~bootstrap/scss/variables:#Typography
+$font-family-sans-serif: map.get(variables.$font-families, 'sans');
+$headings-font-family: map.get(variables.$font-families, 'sans');
+$enable-caret: false;
+
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$h1-font-size:                36px;
+$h2-font-size:                22px;
+$h3-font-size:                18px;
+$h4-font-size:                16px;
+$h5-font-size:                16px;
+$h6-font-size:                16px;
+
+// Bootstrap variables, all !default values are overridden by above
+@import '~bootstrap/scss/variables';
+
+// Bootstrap modifications, e.g. remove Unused Bootstrap Theme Colors
+// $theme-colors: map.remove($theme-colors, 'success');
+
+// Bootstrap imports that require all config from above, comment any unused
+@import '~bootstrap/scss/mixins';
